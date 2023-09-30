@@ -8,6 +8,9 @@ class NotificationService {
     print('TOKEN');
     print(token);
 
+    firebaseMessaging.subscribeToTopic("PAN");
+    firebaseMessaging.subscribeToTopic("POLLO");
+
     FirebaseMessaging.onMessage.listen(_onMessage);
     FirebaseMessaging.onBackgroundMessage(_onBackgroundMessage);
     FirebaseMessaging.onMessageOpenedApp.listen(_onMessageOpenedApp);
