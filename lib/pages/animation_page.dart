@@ -36,7 +36,36 @@ class _AnimationPageState extends State<AnimationPage> {
               );
             },
             child: Text("Animation"),
-          )
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          AnimatedAlign(
+            alignment: Alignment.bottomCenter,
+            duration: Duration(seconds: 1),
+            child: Container(
+              width: 50,
+              height: 50,
+              color: Colors.cyan,
+            ),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          Container(
+            height: 300,
+            width: 300,
+            color: Colors.amber,
+            child: AnimatedAlign(
+              alignment: Alignment.topRight,
+              duration: Duration(seconds: 3),
+              child: Container(
+                width: 50,
+                height: 50,
+                color: Colors.cyan,
+              ),
+            ),
+          ),
         ],
       ),
     );
