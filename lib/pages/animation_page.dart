@@ -81,6 +81,36 @@ class _AnimationPageState extends State<AnimationPage> {
               ),
             ),
             SizedBox(
+              height: 50,
+            ),
+            AnimatedCrossFade(
+              firstChild: FlutterLogo(
+                size: 200,
+                style: FlutterLogoStyle.horizontal,
+              ),
+              secondChild: FlutterLogo(
+                size: 200,
+                style: FlutterLogoStyle.stacked,
+              ),
+              crossFadeState: CrossFadeState.showFirst,
+              duration: Duration(seconds: 4),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            AnimatedCrossFade(
+              firstChild: Image.asset(
+                "assets/images/batman1.png",
+                width: 200,
+              ),
+              secondChild: Image.asset(
+                "assets/images/batman2.jpeg",
+                width: 200,
+              ),
+              crossFadeState: CrossFadeState.showFirst,
+              duration: Duration(seconds: 4),
+            ),
+            SizedBox(
               height: 200,
             ),
           ],
