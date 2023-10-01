@@ -24,7 +24,14 @@ class _ChartPage1State extends State<ChartPage1> {
   }
 
   Widget _graph() {
-    final spots = lista
+    final spots = _generateData(500)
+        .asMap()
+        .entries
+        .map(
+          (e) => FlSpot(e.key.toDouble(), e.value.valor),
+        )
+        .toList();
+    final spots2 = _generateData(300)
         .asMap()
         .entries
         .map(
@@ -35,11 +42,12 @@ class _ChartPage1State extends State<ChartPage1> {
       LineChartData(
         lineBarsData: [
           LineChartBarData(
-              spots: spots,
-              dotData: FlDotData(show: false),
-              color: Colors.amber),
-          LineChartBarData(
             spots: spots,
+            dotData: FlDotData(show: false),
+            color: Colors.red,
+          ),
+          LineChartBarData(
+            spots: spots2,
             color: Colors.blue,
             dotData: FlDotData(show: false),
           )
