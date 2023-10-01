@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notificationsapp/pages/chart_page1.dart';
 import 'package:notificationsapp/pages/chart_page2.dart';
 import 'package:notificationsapp/pages/chart_page3.dart';
+import 'package:go_router/go_router.dart';
 
 class ChartPage extends StatelessWidget {
   const ChartPage({super.key});
@@ -17,12 +18,13 @@ class ChartPage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ChartPage1(),
-                  ),
-                );
+                context.go('/chart1');
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (context) => ChartPage1(),
+                //   ),
+                // );
               },
               child: Text("CHART 1"),
             ),
