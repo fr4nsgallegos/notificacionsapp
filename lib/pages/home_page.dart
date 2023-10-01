@@ -5,7 +5,15 @@ class HomePage extends StatelessWidget {
   final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
 
-  void showLocalNotification() {
+  void showLocalNotification() async {
+    AndroidInitializationSettings androidInitializationSettings =
+        AndroidInitializationSettings("@mipmap/ic_launcher");
+
+    InitializationSettings initializationSettings =
+        InitializationSettings(android: androidInitializationSettings);
+
+    await _flutterLocalNotificationsPlugin.initialize(initializationSettings);
+
     _flutterLocalNotificationsPlugin.show(
       0,
       "HOLA DESDE FLUTTER",
