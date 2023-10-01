@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notificationsapp/pages/animation_page.dart';
 import 'package:notificationsapp/pages/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:notificationsapp/utils/notification_service.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: AnimationPage(),
     );
   }
 }
