@@ -33,36 +33,6 @@ class _ChartPage2State extends State<ChartPage2> {
     return pngBytes;
   }
 
-  final List<FlSpot> data1 = List.generate(8, (index) {
-    return FlSpot(
-      index.toDouble(),
-      index * Random().nextDouble(),
-    );
-  });
-
-  final List<FlSpot> data2 = List.generate(8, (index) {
-    return FlSpot(
-      index.toDouble(),
-      index * Random().nextDouble(),
-    );
-  });
-
-  final List<FlSpot> data3 = List.generate(8, (index) {
-    return FlSpot(
-      index.toDouble(),
-      index * Random().nextDouble(),
-    );
-  });
-
-  // final List<DataModel2> _myData = List.generate(
-  //   30,
-  //   (index) => DataModel2(
-  //     x: index,
-  //     y1: Random().nextInt(20) + Random().nextDouble(),
-  //     y2: Random().nextInt(20) + Random().nextDouble(),
-  //     y3: Random().nextInt(20) + Random().nextDouble(),
-  //   ),
-  // );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,15 +94,19 @@ class _ChartPage2State extends State<ChartPage2> {
               ),
             ),
             ElevatedButton(
-              onPressed: () {
-                captureWidget();
+              onPressed: () async {
+                imagen = await captureWidget();
+
+                setState(() {});
               },
               child: Text("png"),
             ),
             Container(
               height: 300,
               width: 300,
-              child: Image.memory(Uint8List.fromList(imagen)),
+              child: Image.memory(
+                Uint8List.fromList(imagen),
+              ),
             )
           ],
         ),
