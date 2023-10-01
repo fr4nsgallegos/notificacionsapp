@@ -1,9 +1,9 @@
 class DataModel {
   final DateTime date;
-  final double value;
+  final double valor;
 
   DataModel({
     required this.date,
-    required this.value,
+    required this.valor,
   });
 }
