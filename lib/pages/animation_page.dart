@@ -122,6 +122,14 @@ class _AnimationPageState extends State<AnimationPage> {
               duration: Duration(seconds: 4),
             ),
             SizedBox(
+              height: 50,
+            ),
+            AnimatedOpacity(
+              opacity: 0.1,
+              duration: Duration(seconds: 4),
+              child: Image.asset("assets/images/batman1.png"),
+            ),
+            SizedBox(
               height: 200,
             ),
           ],
