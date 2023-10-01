@@ -111,6 +111,17 @@ class _AnimationPageState extends State<AnimationPage> {
               duration: Duration(seconds: 4),
             ),
             SizedBox(
+              height: 50,
+            ),
+            AnimatedDefaultTextStyle(
+              child: Text("Liga de la justicia"),
+              style: TextStyle(
+                color: Colors.cyan,
+                fontSize: 50,
+              ),
+              duration: Duration(seconds: 4),
+            ),
+            SizedBox(
               height: 200,
             ),
           ],
